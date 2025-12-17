@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.post('/payments', (req, res) => {
-    const [orderId, amount, userId] = req.body;
+    const {orderId, amount, userId} = req.body;
 
     const success = Math.random() > 0.2;
 
